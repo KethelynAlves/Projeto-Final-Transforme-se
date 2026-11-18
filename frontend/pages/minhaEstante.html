@@ -3,39 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/styleMinhaEstante.css" />
         <link rel="stylesheet" href="../css/stylePopUp.css" />
-        <title>Minha Estante</title>
+        <link rel="icon" type="image/png" href="../img/icone.png" />
+        <title>Entrelinhas - Minha Estante</title>
     </head>
     <body>
-        <header class="top-header">
-            <div class="header-container">
-                <a href="index.html" class="logo">
-                    <img src="" alt="Logo Entrelinhas" />
+        <header class="topo">
+            <div class="container flex-topo">
+                <a href="#" class="logo">
+                    <img
+                        src="../img/logo-ursinho.jpg"
+                        alt="Entrelinhas"
+                        class="logo-img"
+                    />
                 </a>
 
-                <nav class="main-nav" aria-label="Navegação principal">
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li>
-                            <a href="explorar.html">Explorar livros</a>
-                        </li>
-                        <li>
-                            <a href="minhaEstante.html" class="active"
-                                >Minha estante</a
-                            >
-                        </li>
-                        <li>
-                            <a href="cadastrar.html">Cadastro de Livros</a>
-                        </li>
-                    </ul>
+                <nav class="menu">
+                    <a href="#">Início</a>
+                    <a href="explorarlivros.html">Explorar Livros</a>
+                    <a href="minhaEstante.html" class="ativo">Minha Estante</a>
+                    <a href="#">Cadastrar Livro</a>
+                    <a href="#">Perfil</a>
+                    <a href="#" class="btn-entrar">Entrar</a>
                 </nav>
-
-                <div class="profile-menu">
-                    <button type="button" class="btn-profile">
-                        Meu perfil <span class="arrow">▾</span>
-                    </button>
-                </div>
             </div>
         </header>
         <main class="main-content">
@@ -87,94 +78,144 @@
 
                 <h2 class="section-heading">Continue de onde parou</h2>
 
-                <div class="card-container">
+                <div class="grade-livros-estante" data-status="completo">
                     <!-- Card 1 -->
-                    <article class="card">
-                        <div class="card-cover"></div>
-                        <div class="card-content">
-                            <h3>A biblioteca da meia-noite</h3>
-                            <p class="author">Matt Haig</p>
-                            <div
-                                class="rating"
-                                aria-label="Avaliação 0 de 5 estrelas"
-                            >
-                                ★★★★★
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img
+                                src="../img/a-biblioteca-da-meia-noite.jpg"
+                                alt="A biblioteca da meia-noite"
+                            />
+                            <div class="gancho-hover">
+                                <p>"..."</p>
+                                <span>Clique para ver detalhes</span>
                             </div>
-                            <span class="genre-tag">DRAMA</span>
+                        </div>
+                        <div class="info-livro">
+                            <h3>A biblioteca da meia-noite</h3>
+                            <p class="autor">Matt Haig</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">
+                                Continuar leitura
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card 2 -->
-                    <article class="card">
-                        <div class="card-cover"></div>
-                        <div class="card-content">
-                            <h3>Torto Arado</h3>
-                            <p class="author">Itamar Vieira Junior</p>
-                            <div
-                                class="rating"
-                                aria-label="Avaliação 0 de 5 estrelas"
-                            >
-                                ★★★★★
+                    <article class="card-livro" data-status="completo">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img
+                                src="../img/torto-arado.jpg"
+                                alt="A biblioteca da meia-noite"
+                            />
+                            <div class="gancho-hover">
+                                <p>"..."</p>
+                                <span>Clique para ver detalhes</span>
                             </div>
-                            <span class="genre-tag">FICÇÃO</span>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Torto Arado</h3>
+                            <p class="autor">Itamar Vieira Junior</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">
+                                Continuar leitura
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card 3 -->
-                    <article class="card">
-                        <div class="card-cover"></div>
-                        <div class="card-content">
-                            <h3>O conto da aia</h3>
-                            <p class="author">Margaret Atwood</p>
-                            <div
-                                class="rating"
-                                aria-label="Avaliação 0 de 5 estrelas"
-                            >
-                                ★★★★★
+                    <article class="card-livro" data-status="incompleto">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img
+                                src="../img/o-conto-da-aia.jpg"
+                                alt="A biblioteca da meia-noite"
+                            />
+                            <div class="gancho-hover">
+                                <p>"..."</p>
+                                <span>Clique para ver detalhes</span>
                             </div>
-                            <span class="genre-tag">DISTOPIA</span>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O conto da aia</h3>
+                            <p class="autor">Margaret Atwoodg</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">
+                                Continuar leitura
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card 4 -->
-                    <article class="card">
-                        <div class="card-cover"></div>
-                        <div class="card-content">
-                            <h3>Pequenos incêndios</h3>
-                            <p class="author">Celeste Ng</p>
-                            <div
-                                class="rating"
-                                aria-label="Avaliação 0 de 5 estrelas"
-                            >
-                                ★★★★★
+                    <article class="card-livro" data-status="nao-iniciado">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img
+                                src="../img/pequenosIncendios.jpg"
+                                alt="A biblioteca da meia-noite"
+                            />
+                            <div class="gancho-hover">
+                                <p>"..."</p>
+                                <span>Clique para ver detalhes</span>
                             </div>
-                            <span class="genre-tag">ROMANCE</span>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Pequenos incêndios</h3>
+                            <p class="autor">Celeste Ng</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">
+                                Continuar leitura
+                            </button>
                         </div>
                     </article>
 
                     <!-- Card 5 -->
-                    <article class="card">
-                        <div class="card-cover"></div>
-                        <div class="card-content">
-                            <h3>Duna</h3>
-                            <p class="author">Frank Herbert</p>
-                            <div
-                                class="rating"
-                                aria-label="Avaliação 0 de 5 estrelas"
-                            >
-                                ★★★★★
+                    <article class="card-livro" data-status="nao-iniciado">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img
+                                src="../img/duna.jpg"
+                                alt="A biblioteca da meia-noite"
+                            />
+                            <div class="gancho-hover">
+                                <p>"..."</p>
+                                <span>Clique para ver detalhes</span>
                             </div>
-                            <span class="genre-tag">FANTASIA</span>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Duna</h3>
+                            <p class="autor">Frank Herbert</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">
+                                Continuar leitura
+                            </button>
                         </div>
                     </article>
                 </div>
 
-                <div class="explore-btn">
-                    <p>Não encontrou? Explore nosso acervo.</p>
-                    <a href="explorar.html" class="btn-primary"
-                        >Explorar livros</a
-                    >
-                </div>
+                <div class="bloco-explorar">
+                        <p>
+                            Não encontrou o livro que procurava? Explore os  compartilhados pela comunidade.
+                        </p>
+                        <a href="explorarlivros.html" class="btn-explorar">+ Cadastrar livro</a>
+                    </div>
             </section>
         </main>
 
@@ -232,7 +273,7 @@
             <!-- container -->
         </footer>
 
-        <!-- Estrutura do Pop-up (Modal) atualizado -->
+        <!-- Estrutura do Pop-up (Modal)-->
         <div id="bookModal" class="modal-overlay" aria-hidden="true">
             <div
                 class="modal-box"
@@ -250,12 +291,10 @@
                 </button>
 
                 <div class="modal-body">
-                    <!-- Coluna Esquerda: Capa com moldura rosa -->
                     <div class="modal-cover-frame">
                         <img id="modalCoverImg" src="" alt="Capa do livro" />
                     </div>
 
-                    <!-- Coluna Direita: Detalhes -->
                     <div class="modal-info">
                         <span id="modalCategory" class="modal-category"
                             >FICÇÃO CONTEMPORÂNEA</span
@@ -263,7 +302,6 @@
                         <h2 id="modalTitle">A biblioteca da meia-noite</h2>
                         <p id="modalAuthor" class="modal-author">Matt Haig</p>
 
-                        <!-- Tags de subgêneros -->
                         <div id="modalTags" class="modal-tags">
                             <span class="tag-pill">Reflexão</span>
                             <span class="tag-pill">Fantasia</span>
@@ -280,7 +318,6 @@
                             </p>
                         </div>
 
-                        <!-- Botões de Ação -->
                         <div class="modal-actions">
                             <button type="button" class="btn-save">
                                 <svg
@@ -302,25 +339,23 @@
                             </button>
                         </div>
 
-                        <!-- Caixa de Opinião -->
                         <div class="opinion-card">
                             <h4>Sua opinião importa</h4>
-                                <textarea
-                                    id="opinionInput"
-                                    class="opinion-textarea"
-                                    name="opinionInput"
-                                    placeholder="Compartilhe uma avaliação"
-                                ></textarea>
-                                <button type="button" class="btn-submit-opinion">
-                                    Enviar
-                                </button>
+                            <textarea
+                                id="opinionInput"
+                                class="opinion-textarea"
+                                name="opinionInput"
+                                placeholder="Compartilhe uma avaliação"
+                            ></textarea>
+                            <button type="button" class="btn-submit-opinion">
+                                Enviar
+                            </button>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="../js/script.js"></script>
+        <script src="../js/scriptMinhaEstante.js"></script>
     </body>
 </html>

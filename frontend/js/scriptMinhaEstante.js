@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const cardContainer = document.querySelector(".card-container");
+    const cardContainer = document.querySelector(".grade-livros-estante");
     const modal = document.getElementById("bookModal");
     const closeModalBtn = document.getElementById("closeModalBtn");
+    
 
-    // Dados de exemplo para os cards que já estão no HTML (funciona mesmo sem o Spring Boot ligado)
     const dadosIniciais = {
         "A biblioteca da meia-noite": {
             titulo: "A biblioteca da meia-noite",
@@ -52,14 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Função que preenche e abre o pop-up
     function abrirModal(livro) {
         document.getElementById("modalCategory").textContent = livro.categoria || livro.genero || "LITERATURA";
         document.getElementById("modalTitle").textContent = livro.titulo;
         document.getElementById("modalAuthor").textContent = livro.autor;
         document.getElementById("modalSynopsis").textContent = livro.sinopse || "Sem sinopse.";
 
-        // Atualiza a imagem da capa (se houver URL cadastrada)
         const coverImg = document.getElementById("modalCoverImg");
         if (livro.capaUrl) {
             coverImg.src = livro.capaUrl;
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
             coverImg.removeAttribute("src");
         }
 
-        // Preenche as pílulas de tags (aceita um array de tags ou usa o gênero)
         const tagsContainer = document.getElementById("modalTags");
         tagsContainer.innerHTML = "";
         const listaTags = livro.tags || [livro.genero];
@@ -86,13 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.setAttribute("aria-hidden", "false");
     }
 
-    // Função para fechar o pop-up
     function fecharModal() {
         modal.classList.remove("open");
         modal.setAttribute("aria-hidden", "true");
     }
 
-    // Eventos para fechar o modal (botão X, clique fora e tecla Esc)
     if (closeModalBtn) {
         closeModalBtn.addEventListener("click", fecharModal);
     }
@@ -111,25 +106,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Ativa o clique nos cards estáticos que já estão no HTML
-    document.querySelectorAll(".card").forEach((card) => {
-        card.addEventListener("click", () => {
+
+    document.querySelectorAll(".card-livro").forEach((card) => {
+        card.addEventListener("click", (event) => {
+            if (event.target.closest(".btn-adicionar")) return;
+
             const tituloCard = card.querySelector("h3").textContent.trim();
-            const autorCard = card.querySelector(".author").textContent.trim();
-            const generoCard = card.querySelector(".genre-tag").textContent.trim();
+            const autorCard = card.querySelector(".autor").textContent.trim();
+            const generoCard = card.querySelector(".tag-categoria").textContent.trim();
+            const capaSrc = card.querySelector(".capa-wrapper img").getAttribute("src");
 
             const livroEncontrado = dadosIniciais[tituloCard] || {
                 titulo: tituloCard,
                 autor: autorCard,
                 genero: generoCard,
+                capaUrl: capaSrc,
                 sinopse: "Sinopse do livro selecionado."
             };
+
+            livroEncontrado.capaUrl = capaSrc;
 
             abrirModal(livroEncontrado);
         });
     });
-
-    // Tenta buscar a lista atualizada do Spring Boot (quando estiver rodando)
     fetch("http://localhost:8080/livros")
         .then((response) => {
             if (!response.ok) throw new Error("Servidor não respondeu");
@@ -140,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             livros.forEach((livro) => {
                 const card = document.createElement("article");
-                card.className = "card";
+                card.className = "card-livro";
                 card.innerHTML = `
                     <div class="card-cover"></div>
                     <div class="card-content">
@@ -159,3 +158,55 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Spring Boot offline: exibindo os cards locais do HTML.");
         });
 });
+
+const campoBuscaEstante = document.getElementById("leitura");
+    const botoesStatus = document.querySelectorAll(".filter-pills .pill");
+    let statusSelecionado = "todos"
+
+    function normalizarStatus(textoBotao) {
+        const texto = textoBotao.trim().toLowerCase();
+        if (texto === "completo") return "completo";
+        if (texto === "incompleto") return "incompleto";
+        if (texto === "não iniciado") return "nao-iniciado";
+        return "todos";
+    }
+
+    function filtrarEstante() {
+        const termoBusca = campoBuscaEstante ? campoBuscaEstante.value.toLowerCase().trim() : "";
+        const cardsDaEstante = document.querySelectorAll(".grade-livros-estante .card-livro");
+
+        cardsDaEstante.forEach((card) => {
+            const titulo = card.querySelector("h3").innerText.toLowerCase();
+            const autor = card.querySelector(".autor").innerText.toLowerCase();
+            const categoria = card.querySelector(".tag-categoria").innerText.toLowerCase();
+            const statusLivro = card.getAttribute("data-status") || "";
+
+            const bateTexto =
+                titulo.includes(termoBusca) ||
+                autor.includes(termoBusca) ||
+                categoria.includes(termoBusca);
+
+            const bateStatus =
+                statusSelecionado === "todos" || statusLivro === statusSelecionado;
+
+            if (bateTexto && bateStatus) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    if (campoBuscaEstante) {
+        campoBuscaEstante.addEventListener("input", filtrarEstante);
+    }
+
+    botoesStatus.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            botoesStatus.forEach((btn) => btn.classList.remove("active"));
+            botao.classList.add("active");
+
+            statusSelecionado = normalizarStatus(botao.textContent);
+            filtrarEstante();
+        });
+    });

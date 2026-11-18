@@ -192,7 +192,7 @@
 /* Cartão "Sua opinião importa" */
 .opinion-card {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     background-color: #ffffff;
     border: 1px solid #eadcdd;
     border-radius: 12px;
