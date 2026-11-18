@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrelinhas - Explorar Livros</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/explorarlivros.css">
+    <link rel="icon" type="image/png" href="img/icone.png">
+</head>
+<body>
+
+        <header class="topo">
+        <div class="container flex-topo">
+            <a href="#" class="logo">
+                <img src="img/logo-ursinho.jpg" alt="Entrelinhas" class="logo-img">
+            </a>
+
+            <nav class="menu">
+                <a href="#">Início</a>
+                <a href="#" class="ativo">Explorar Livros</a>
+                <a href="#">Minha Estante</a>
+                <a href="#">Cadastrar Livro</a>
+                <a href="#">Perfil</a>
+                <a href="#" class="btn-entrar">Entrar</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="container">
+        
+        <div class="cabecalho-pagina">
+            <h1>Explorar Livros</h1>
+            <p>Descubra novos títulos e autores</p>
+        </div>
+
+        <div class="layout-explorar">
+            
+            <aside class="barra-filtros">
+                <h2>Filtros</h2>
+
+                <div class="grupo-filtro">
+                    <label for="busca">Buscar por título, autor ou palavra-chave</label>
+                    <input type="text" id="busca" placeholder="Digite para buscar...">
+                    <small>Pressione Enter para buscar</small>
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria">
+                        <option value="">Todas as categorias</option>
+                        <option value="romance">Romance</option>
+                        <option value="ficcao">Ficção Científica e Fantasia</option>
+                        <option value="suspense">Suspense e Investigação</option>
+                        <option value="nao-ficcao">Ensaio, Religioso e Não Ficção</option>
+                        <option value="classicos">Clássicos e Fábula</option>
+                    </select>
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="status">Status de Leitura</label>
+                    <select id="status">
+                        <option value="">Todos</option>
+                        <option value="completo">Completo</option>
+                        <option value="andamento">Em andamento</option>
+                        <option value="nao-iniciado">Não iniciado</option>
+                    </select>
+                </div>
+
+            </aside>
+
+            <section class="area-livros">
+                
+                <div class="topo-lista">
+                    <h2>Todos os livros (16)</h2>
+                    <button type="button" id="btn-surpreenda" class="btn-surpreenda">🎲 Me Surpreenda</button>
+                </div>
+
+                <div class="grade-livros">
+                    
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">ROMANCE DRAMÁTICO</span>
+                            <img src="img/tudo-é-rio.jpg" alt="Tudo é Rio">
+                            <div class="gancho-hover">
+                                <p>"Um triângulo amoroso marcado pelo ciúme, pela perda e pelo perdão."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Tudo é Rio</h3>
+                            <p class="autor">Carla Madeira</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.9</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">ROMANCE E DRAMA</span>
+                            <img src="img/culpa-estrelas.jpg" alt="A Culpa é das Estrelas">
+                            <div class="gancho-hover">
+                                <p>"Uma história sensível e bem-humorada sobre amar apesar do tempo curto."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>A Culpa é das Estrelas</h3>
+                            <p class="autor">John Green</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.5</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">COMÉDIA E FANTASIA</span>
+                            <img src="img/maldito-karma.jpg" alt="Maldito Karma">
+                            <div class="gancho-hover">
+                                <p>"Reencarnar como formiga foi só o começo da corrida para salvar sua família."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Maldito Karma</h3>
+                            <p class="autor">David Safier</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.2</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">FICÇÃO CIENTÍFICA</span>
+                            <img src="img/guia-mochileiro.jpg" alt="O Guia do Mochileiro das Galáxias">
+                            <div class="gancho-hover">
+                                <p>"Não entre em pânico: pegue sua toalha e embarque na viagem mais absurda do cosmos."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Guia do Mochileiro das Galáxias</h3>
+                            <p class="autor">Douglas Adams</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">ENSAIO LITERÁRIO</span>
+                            <img src="img/adiar-fim-mundo.jpg" alt="Ideias para Adiar o Fim do Mundo">
+                            <div class="gancho-hover">
+                                <p>"Um convite urgente para repensar nossa relação com a Terra e os saberes ancestrais."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Ideias para Adiar o Fim do Mundo</h3>
+                            <p class="autor">Ailton Krenak</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.9</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">CRÍTICA CULTURAL</span>
+                            <img src="img/olhares-negros.jpg" alt="Olhares Negros: Raça e Representação">
+                            <div class="gancho-hover">
+                                <p>"Um olhar crítico e transformador sobre como a cultura retrata a população negra."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Olhares Negros: Raça e Representação</h3>
+                            <p class="autor">bell hooks</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                                        <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">RELIGIOSO E PROFÉTICO</span>
+                            <img src="img/grande-conflito.jpg" alt="O Grande Conflito">
+                            <div class="gancho-hover">
+                                <p>"A história da humanidade vista através da batalha espiritual entre o bem e o mal."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Grande Conflito</h3>
+                            <p class="autor">Ellen G. White</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.6</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">ROMANCE DE ÉPOCA</span>
+                            <img src="img/orgulho-preconceito.jpg" alt="Orgulho e Preconceito">
+                            <div class="gancho-hover">
+                                <p>"Entre bailes, ironias e primeiras impressões, o orgulho pode esconder um grande amor."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Orgulho e Preconceito</h3>
+                            <p class="autor">Jane Austen</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">LITERATURA ESPANHOLA</span>
+                            <img src="img/dom-quixote.jpg" alt="Dom Quixote de la Mancha">
+                            <div class="gancho-hover">
+                                <p>"Um sonhador, seu fiel escudeiro e moinhos de vento em uma aventura inesquecível."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Dom Quixote de la Mancha</h3>
+                            <p class="autor">Miguel de Cervantes</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.4</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">FÁBULA</span>
+                            <img src="img/pequeno-principe.jpg" alt="O Pequeno Príncipe">
+                            <div class="gancho-hover">
+                                <p>"O essencial é invisível aos olhos: uma viagem poética pelo universo e pela infância."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Pequeno Príncipe</h3>
+                            <p class="autor">Antoine de Saint-Exupéry</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.9</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">ROMANCE</span>
+                            <img src="img/conde-monte-cristo.jpg" alt="O Conde de Monte Cristo">
+                            <div class="gancho-hover">
+                                <p>"Traído e preso injustamente, ele retorna anos depois com fortuna e sede de justiça."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Conde de Monte Cristo</h3>
+                            <p class="autor">Alexandre Dumas</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.7</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DIÁRIO / NÃO FICÇÃO</span>
+                            <img src="img/anne-frank.jpg" alt="O Diário de Anne Frank">
+                            <div class="gancho-hover">
+                                <p>"Relatos reais de esperança e resistência escritos durante a ocupação nazista."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Diário de Anne Frank</h3>
+                            <p class="autor">Anne Frank</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★★</span>
+                                <span class="nota">4.9</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                                       <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">CRIATIVIDADE</span>
+                            <img src="img/roube-como-artista.jpg" alt="Roube como um Artista">
+                            <div class="gancho-hover">
+                                <p>"Nada é 100% original: aprenda a misturar boas referências para criar algo seu."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Roube como um Artista</h3>
+                            <p class="autor">Austin Kleon</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.3</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">MISTÉRIO / ENIGMA</span>
+                            <img src="img/homem-de-giz.jpg" alt="O Homem de Giz">
+                            <div class="gancho-hover">
+                                <p>"Desenhos secretos na infância que levam a um crime nunca resolvido trinta anos depois."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O Homem de Giz</h3>
+                            <p class="autor">C. J. Tudor</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★☆☆</span>
+                                <span class="nota">3.8</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">INVESTIGAÇÃO</span>
+                            <img src="img/manual-assassinato.jpg" alt="Manual de Assassinato para Boas Garotas">
+                            <div class="gancho-hover">
+                                <p>"Um projeto escolar que reabre um caso arquivado — e coloca a investigadora em perigo."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Manual de Assassinato para Boas Garotas</h3>
+                            <p class="autor">Holly Jackson</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★★☆</span>
+                                <span class="nota">4.6</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+                    </article>
+
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">SUSPENSE</span>
+                            <img src="img/um-de-nos-mentindo.jpg" alt="Um de Nós Está Mentindo">
+                            <div class="gancho-hover">
+                                <p>"Cinco alunos entram na detenção, apenas quatro saem vivos. Todos têm algo a esconder."</p>
+                                <span>Clique para ler mais</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Um de Nós Está Mentindo</h3>
+                            <p class="autor">Karen M. McManus</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">★★★☆☆</span>
+                                <span class="nota">3.9</span>
+                            </div>
+                            <button type="button" class="btn-adicionar">+ Minha Estante</button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="bloco-cadastrar">
+                    <p>Não encontrou o livro que procurava? Cadastre e compartilhe com a comunidade.</p>
+                    <a href="#" class="btn-cadastrar">+ Cadastrar livro</a>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+    
+    <footer class="rodape">
+        <div class="container flex-rodape">
+            <p><strong>Entrelinhas</strong> • Cada livro revela um novo mundo.</p>
+            <span>Leitura, descoberta e comunidade.</span>
+        </div>
+    </footer>
+
+    <script src="js/explorarlivros.js"></script>
+
+    </body>
+</html>
