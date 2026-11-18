@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/stylePopUp.css" />
+        <title>Minha Estante</title>
+    </head>
+    <body>
+        <header class="top-header">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img src="" alt="Logo Entrelinhas" />
+                </a>
+
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li>
+                            <a href="explorar.html">Explorar livros</a>
+                        </li>
+                        <li>
+                            <a href="minhaEstante.html" class="active"
+                                >Minha estante</a
+                            >
+                        </li>
+                        <li>
+                            <a href="cadastrar.html">Cadastro de Livros</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="profile-menu">
+                    <button type="button" class="btn-profile">
+                        Meu perfil <span class="arrow">▾</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="shelf-section">
+                <div class="page-title-group">
+                    <h1>Continue de onde parou</h1>
+                    <p class="subtitle">Relembre, leia, continue</p>
+                </div>
+
+                <!-- Barra de Busca e Filtros -->
+                <div class="controls-bar">
+                    <div class="search-box">
+                        <svg
+                            class="search-icon"
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                        >
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input
+                            type="text"
+                            id="leitura"
+                            name="leitura"
+                            placeholder="Buscar por título, autor ou palavra-chave"
+                        />
+                    </div>
+
+                    <div class="filter-group">
+                        <span class="filter-label">Filtrar por Status</span>
+                        <div class="filter-pills">
+                            <button type="button" class="pill active">
+                                Todos
+                            </button>
+                            <button type="button" class="pill">Completo</button>
+                            <button type="button" class="pill">
+                                Incompleto
+                            </button>
+                            <button type="button" class="pill">
+                                Não iniciado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-heading">Continue de onde parou</h2>
+
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-cover"></div>
+                        <div class="card-content">
+                            <h3>A biblioteca da meia-noite</h3>
+                            <p class="author">Matt Haig</p>
+                            <div
+                                class="rating"
+                                aria-label="Avaliação 0 de 5 estrelas"
+                            >
+                                ★★★★★
+                            </div>
+                            <span class="genre-tag">DRAMA</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-cover"></div>
+                        <div class="card-content">
+                            <h3>Torto Arado</h3>
+                            <p class="author">Itamar Vieira Junior</p>
+                            <div
+                                class="rating"
+                                aria-label="Avaliação 0 de 5 estrelas"
+                            >
+                                ★★★★★
+                            </div>
+                            <span class="genre-tag">FICÇÃO</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-cover"></div>
+                        <div class="card-content">
+                            <h3>O conto da aia</h3>
+                            <p class="author">Margaret Atwood</p>
+                            <div
+                                class="rating"
+                                aria-label="Avaliação 0 de 5 estrelas"
+                            >
+                                ★★★★★
+                            </div>
+                            <span class="genre-tag">DISTOPIA</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="card-cover"></div>
+                        <div class="card-content">
+                            <h3>Pequenos incêndios</h3>
+                            <p class="author">Celeste Ng</p>
+                            <div
+                                class="rating"
+                                aria-label="Avaliação 0 de 5 estrelas"
+                            >
+                                ★★★★★
+                            </div>
+                            <span class="genre-tag">ROMANCE</span>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="card">
+                        <div class="card-cover"></div>
+                        <div class="card-content">
+                            <h3>Duna</h3>
+                            <p class="author">Frank Herbert</p>
+                            <div
+                                class="rating"
+                                aria-label="Avaliação 0 de 5 estrelas"
+                            >
+                                ★★★★★
+                            </div>
+                            <span class="genre-tag">FANTASIA</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="explore-btn">
+                    <p>Não encontrou? Explore nosso acervo.</p>
+                    <a href="explorar.html" class="btn-primary"
+                        >Explorar livros</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="footer-content">
+                    <p>
+                        &copy; 2024 Minha Estante. Todos os direitos reservados.
+                    </p>
+                    <nav class="footer-nav" aria-label="Links do rodapé">
+                        <div class="footer-links">
+                            <h4>Plataforma</h4>
+                            <ul>
+                                <li>
+                                    <a href="explorar.html">Explorar Livros</a>
+                                </li>
+                                <li>
+                                    <a href="minha-estante.html"
+                                        >Minha Estante</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="cadastrar.html">Cadastrar Livro</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4>Comunidade</h4>
+                            <ul>
+                                <li><a href="login.html">Entrar</a></li>
+                                <li><a href="cadastro.html">Criar Conta</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="#">Termos de Uso</a></li>
+                                <li><a href="#">Política de Privacidade</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="footer-bottom">
+                        <p>
+                            &copy; 2024 Entrelinhas. Todos os direitos
+                            reservados.
+                        </p>
+                        <p class="footer-credits">
+                            Desenvolvido para o curso Transforme-se | PROA —
+                            Desenvolvimento Front-End Online
+                        </p>
+                    </div>
+                </div>
+                <!-- footer-content -->
+            </div>
+            <!-- container -->
+        </footer>
+
+        <!-- Estrutura do Pop-up (Modal) atualizado -->
+        <div id="bookModal" class="modal-overlay" aria-hidden="true">
+            <div
+                class="modal-box"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modalTitle"
+            >
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeModalBtn"
+                    aria-label="Fechar janela"
+                >
+                    &times;
+                </button>
+
+                <div class="modal-body">
+                    <!-- Coluna Esquerda: Capa com moldura rosa -->
+                    <div class="modal-cover-frame">
+                        <img id="modalCoverImg" src="" alt="Capa do livro" />
+                    </div>
+
+                    <!-- Coluna Direita: Detalhes -->
+                    <div class="modal-info">
+                        <span id="modalCategory" class="modal-category"
+                            >FICÇÃO CONTEMPORÂNEA</span
+                        >
+                        <h2 id="modalTitle">A biblioteca da meia-noite</h2>
+                        <p id="modalAuthor" class="modal-author">Matt Haig</p>
+
+                        <!-- Tags de subgêneros -->
+                        <div id="modalTags" class="modal-tags">
+                            <span class="tag-pill">Reflexão</span>
+                            <span class="tag-pill">Fantasia</span>
+                            <span class="tag-pill">Drama</span>
+                        </div>
+
+                        <div class="modal-synopsis">
+                            <h3>Sinopse</h3>
+                            <p id="modalSynopsis">
+                                Entre a vida e a morte existe uma biblioteca
+                                onde cada livro oferece a chance de experimentar
+                                uma vida diferente. Uma história sobre escolhas,
+                                arrependimentos e possibilidades.
+                            </p>
+                        </div>
+
+                        <!-- Botões de Ação -->
+                        <div class="modal-actions">
+                            <button type="button" class="btn-save">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                                    ></path>
+                                </svg>
+                                Salvar na estante
+                            </button>
+                            <button type="button" class="btn-recommend">
+                                Indicar para alguém
+                            </button>
+                        </div>
+
+                        <!-- Caixa de Opinião -->
+                        <div class="opinion-card">
+                            <h4>Sua opinião importa</h4>
+                                <textarea
+                                    id="opinionInput"
+                                    class="opinion-textarea"
+                                    name="opinionInput"
+                                    placeholder="Compartilhe uma avaliação"
+                                ></textarea>
+                                <button type="button" class="btn-submit-opinion">
+                                    Enviar
+                                </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

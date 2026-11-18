@@ -1,0 +1,256 @@
+/* Estilos do Pop-up (Modal) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(61, 53, 54, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background-color: #fdf9f9;
+    border: 1px solid #eadcdd;
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 2.2rem 2.5rem;
+    position: relative;
+    box-shadow: 0 16px 40px rgba(61, 53, 54, 0.22);
+    transform: translateY(12px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal-box {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.9rem;
+    line-height: 1;
+    color: #756b6c;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #814b5b;
+}
+
+.modal-body {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+/* Moldura rosa ao redor da capa */
+.modal-cover-frame {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: #e6c8cd;
+    padding: 1.6rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.8rem;
+}
+
+.modal-cover-frame img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #814b5b; /* Cor de fundo caso ainda não tenha imagem */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Coluna de Informações */
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-category {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #814b5b;
+    margin-bottom: 0.7rem;
+}
+
+.modal-info h2 {
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: #3d3536;
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+}
+
+.modal-author {
+    font-size: 1.1rem;
+    color: #756b6c;
+    margin-bottom: 1rem;
+}
+
+/* Pílulas de Tags */
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.tag-pill {
+    background-color: #efe3e4;
+    color: #814b5b;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+}
+
+/* Sinopse */
+.modal-synopsis h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #3d3536;
+    margin-bottom: 0.5rem;
+}
+
+.modal-synopsis p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #635a5b;
+    margin-bottom: 1.6rem;
+}
+
+/* Botões de Ação */
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-save {
+    background-color: #814b5b;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #693b49;
+}
+
+.btn-recommend {
+    background-color: transparent;
+    color: #814b5b;
+    border: 1px solid #e2cfd1;
+    padding: 0.75rem 1.6rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-recommend:hover {
+    background-color: #f5ebeb;
+}
+
+/* Cartão "Sua opinião importa" */
+.opinion-card {
+    display: grid;
+    grid-template-columns: 2fr;
+    background-color: #ffffff;
+    border: 1px solid #eadcdd;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+
+    & h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #3d3536;
+        margin-bottom: 0.65rem;
+    }
+
+    & .btn-submit-opinion {
+        background-color: transparent;
+        border: none;
+        color: #814b5b;
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 0.4rem;
+    }
+
+    & .opinion-textarea {
+        width: 100%;
+        border-style: none;
+        background-color: #efe3e4;
+        color: #635a5b;
+        font-size: 0.86rem;
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        min-height: 54px;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 0 2px #814b5b;
+            background-color: #f7eff0;
+        }
+    }
+}
+
+/* Responsividade do Modal */
+@media (max-width: 768px) {
+    .modal-box {
+        padding: 1.5rem;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-cover-frame {
+        width: 210px;
+        margin-top: 0.5rem;
+        padding: 1.1rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.6rem;
+    }
+}
