@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Criar Conta - Entrelinhas</title>
+        <link rel="stylesheet" href="../css/styleCadastroLogin.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" type="image/png" href="../img/logo/icone.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body class="pagina-cadastro">
+        <main class="container">
+            <div class="cadastro-box">
+                <div class="logo">
+                    <img
+                        src="../img/logo/logo-completa.jpg"
+                        alt="Logo Entrelinhas"
+                    />
+                </div>
+
+                <h1>Criar Conta</h1>
+
+                <form action="#" method="POST">
+                    <div class="campo">
+                        <label for="nome">Nome:</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        />
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Seu@email.com"
+                            required
+                        />
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        />
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar-senha">Repita a senha</label>
+                        <input
+                            type="password"
+                            id="confirmar-senha"
+                            name="confirmar-senha"
+                            placeholder="Repita sua senha"
+                            required
+                        />
+                    </div>
+
+                    <button type="submit" class="btn-cadastro">
+                        Criar Conta
+                    </button>
+
+                    <button type="button" class="btn-google">
+                        <img
+                            src="../img/logo/logoGoogle.jpeg"
+                            alt="Google"
+                            class="google-icon"
+                        />
+                        Entrar com Google
+                    </button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Entrar - Entrelinhas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" type="image/png" href="../img/logo/icone.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/styleCadastroLogin.css" />
+    </head>
+
+    <body>
+        <main class="pagina-login">
+            <!-- LADO ESQUERDO -->
+            <section class="painel-esquerdo">
+                <div class="conteudo-painel">
+                    <h1>
+                        Cada livro abre <br />
+                        um novo mundo.
+                    </h1>
+                    <p>
+                        Descubra histórias e construa sua próxima rotina
+                        <br class="quebra-desktop" />
+                        de leitura.
+                    </p>
+                </div>
+            </section>
+
+            <!-- LADO DIREITO -->
+            <section class="painel-formulario">
+                <div class="card-login">
+                    <div class="logotipo">
+                        <!-- LOGO -->
+                        <img
+                            src="../img/logo/logo-completa.jpg"
+                            alt="Logo Entrelinhas"
+                        />
+                    </div>
+
+                    <!-- TÍTULO -->
+                    <header class="cabecalho-card">
+                        <h2>Boas histórias começam aqui.</h2>
+                        <p>
+                            Organize sua leitura e encontre sua próxima grande
+                            história
+                        </p>
+                    </header>
+
+                    <!-- FORMULÁRIO -->
+                    <form class="formulario-login" action="#" method="post">
+                        <!-- CAMPO E-MAIL -->
+                        <div class="campo-formulario">
+                            <label for="email">E-mail</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seu@email.com"
+                                autocomplete="email"
+                                required
+                            />
+                        </div>
+
+                        <!-- CAMPO SENHA -->
+                        <div class="campo-formulario">
+                            <label for="senha">Senha</label>
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            />
+                        </div>
+
+                        <!-- BOTÃO ENTRAR -->
+                        <a
+                            href="explorarlivros.html"
+                            class="botao botao-entrar"
+                        >
+                            Entrar
+                        </a>
+
+                        <!-- SEPARADOR -->
+                        <div class="separador">
+                            <span>ou</span>
+                        </div>
+
+                        <!-- CRIAR CONTA -->
+                        <a
+                            href="cadastroConta.html"
+                            class="botao botao-criarconta"
+                        >
+                            Criar uma conta
+                        </a>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
