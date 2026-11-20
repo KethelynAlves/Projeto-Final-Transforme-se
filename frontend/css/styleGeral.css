@@ -1,0 +1,618 @@
+/*  VARIÁVEIS E CONFIGURAÇÕES GERAIS */
+
+:root {
+    --bg-page: #FFF9F7;
+    --primary-wine: #814b5b;
+    --primary-wine-alt: #8d5367;
+    --primary-wine-hover: #693b49;
+    --tag-bg: #efe3e4;
+    --tag-text: #814b5b;
+    --footer-bg: #bc989b;
+    --text-dark: #40343a;
+    --text-muted: #756b6c;
+    --border-light: #eadcdd;
+    --border-pink: #e8c9d1;
+    --star-inactive: #d6d0d1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* CABEÇALHO E MENU DE NAVEGAÇÃO */
+.topo {
+    background-color: #ffffff;
+    border-bottom: 1.5px solid var(--border-pink);
+    height: 76px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(141, 83, 103, 0.06);
+
+    & .flex-topo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #333333;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+
+        & .logo-img {
+            height: 54px;
+            width: auto;
+            display: block;
+            border-radius: 8px;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    & a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 8px 14px;
+        border-radius: 8px;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: var(--bg-page);
+            color: var(--primary-wine-alt);
+        }
+
+        &.ativo {
+            background-color: var(--border-pink);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        & .btn-entrar {
+            background-color: var(--primary-wine-alt);
+            color: var(--bg-page);
+
+            &:hover {
+                background-color: #c5a2a4;
+                color: var(--text-dark);
+            }
+        }
+    }
+}
+
+/* COMPONENTE: CARD DE LIVRO */
+.card-livro {
+    background-color: #ffffff;
+    border: 1px solid #e8dfde;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(51, 51, 51, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(124, 74, 90, 0.16);
+        border-color: #d8b4b8;
+    }
+}
+
+.capa-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    background-color: #e8d0d3;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+}
+
+.tag-categoria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background-color: #7c4a5a;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.4px;
+}
+
+.gancho-hover {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(94, 56, 69, 0.92);
+    color: #ffffff;
+    padding: 45px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+
+    & p {
+        font-size: 13px;
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    & span {
+        font-size: 11px;
+        font-weight: 600;
+        background-color: #e8d0d3;
+        color: #5e3845;
+        padding: 4px 12px;
+        border-radius: 20px;
+    }
+}
+
+.card-livro:hover .gancho-hover {
+    opacity: 1;
+}
+
+.info-livro {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    & h3 {
+        font-size: 15px;
+        color: #333333;
+        margin-bottom: 4px;
+        line-height: 1.3;
+    }
+
+    & .autor {
+        font-size: 13px;
+        color: #777777;
+        margin-bottom: 8px;
+    }
+}
+
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.estrelas {
+    color: #9d6b7b;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.nota {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7c4a5a;
+}
+
+.btn-adicionar {
+    margin-top: auto;
+    width: 100%;
+    padding: 8px;
+    background-color: #f5f0ef;
+    color: #7c4a5a;
+    border: 1px solid #e8d0d3;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #7c4a5a;
+        color: #ffffff;
+    }
+}
+
+/* COMPONENTE: BLOCO CHAMADA PARA AÇÃO (CTA) */
+.bloco-explorar,
+.bloco-cadastrar {
+    margin-top: 40px;
+    padding: 24px;
+    background-color: var(--border-pink);
+    border: 1.5px solid #c5a2a4;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    & p {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text-dark);
+    }
+}
+
+.btn-explorar,
+.btn-cadastrar {
+    background-color: var(--primary-wine-alt);
+    color: var(--bg-page);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: var(--text-dark);
+    }
+}
+
+/* RODAPÉ PADRÃO */
+.footer {
+    background-color: var(--footer-bg);
+    color: #ffffff;
+    padding: 0.9rem 3rem;
+    width: 100%;
+    margin-top: 1rem;
+
+    & .footer-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        font-weight: 600;
+    }
+
+    & .footer-logo {
+        height: 32px;
+    }
+
+    & .footer-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        & a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        & .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+
+            & a {
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* POP-UP / MODAL DE DETALHES DO LIVRO */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(61, 53, 54, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background-color: #fdf9f9;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 2.2rem 2.5rem;
+    position: relative;
+    box-shadow: 0 16px 40px rgba(61, 53, 54, 0.22);
+    transform: translateY(12px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal-box {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+        color: var(--primary-wine);
+    }
+}
+
+.modal-body {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.modal-cover-frame {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: #e6c8cd;
+    padding: 1.6rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.8rem;
+
+    & img {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        border-radius: 4px;
+        background-color: var(--primary-wine);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    & h2 {
+        font-size: 2.15rem;
+        font-weight: 700;
+        color: #3d3536;
+        line-height: 1.15;
+        margin-bottom: 0.6rem;
+    }
+}
+
+.modal-category {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--primary-wine);
+    margin-bottom: 0.7rem;
+}
+
+.modal-author {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.tag-pill {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+}
+
+.modal-synopsis h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #3d3536;
+    margin-bottom: 0.5rem;
+}
+
+.modal-synopsis p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #635a5b;
+    margin-bottom: 1.6rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-save {
+    background-color: var(--primary-wine);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: var(--primary-wine-hover);
+    }
+}
+
+.btn-recommend {
+    background-color: transparent;
+    color: var(--primary-wine);
+    border: 1px solid #e2cfd1;
+    padding: 0.75rem 1.6rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #f5ebeb;
+    }
+}
+
+.opinion-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+
+    & h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #3d3536;
+        margin-bottom: 0.65rem;
+    }
+
+    & .btn-submit-opinion {
+        background-color: transparent;
+        border: none;
+        color: var(--primary-wine);
+        font-weight: 600;
+        cursor: pointer;
+        margin-left: 0.4rem;
+    }
+
+    & .opinion-textarea {
+        width: 100%;
+        border-style: none;
+        background-color: var(--tag-bg);
+        color: #635a5b;
+        font-size: 0.86rem;
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        min-height: 54px;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--primary-wine);
+            background-color: #f7eff0;
+        }
+    }
+}
+
+/* RESPONSIVIDADE GLOBAL (FOOTER E MODAL) */
+@media (max-width: 768px) {
+    .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .modal-box {
+        padding: 1.5rem;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-cover-frame {
+        width: 210px;
+        margin-top: 0.5rem;
+        padding: 1.1rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.6rem;
+    }
+}

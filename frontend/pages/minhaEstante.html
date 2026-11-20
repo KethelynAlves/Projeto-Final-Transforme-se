@@ -3,27 +3,39 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/styleMinhaEstante.css" />
-        <link rel="stylesheet" href="../css/stylePopUp.css" />
-        <link rel="icon" type="image/png" href="../img/logo/icone.png" />
         <title>Entrelinhas - Minha Estante</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="../css/styleGeral.css" />
+        <link rel="stylesheet" href="../css/styleMinhaEstante.css" />
     </head>
     <body>
         <header class="topo">
             <div class="container flex-topo">
-                <a href="#" class="logo">
+                <a href="../index.html" class="logo">
                     <img
-                        src="../img/logo/logo-completa.jpg"
+                        src="../img/logo/logo.svg"
                         alt="Entrelinhas"
                         class="logo-img"
                     />
                 </a>
 
                 <nav class="menu">
-                    <a href="#">Início</a>
+                    <a href="../index.html">Início</a>
                     <a href="explorarlivros.html">Explorar Livros</a>
                     <a href="minhaEstante.html" class="ativo">Minha Estante</a>
-                    <a href="#">Cadastrar Livro</a>
+                    <a href="cadastrarLivro.html">Cadastrar Livro</a>
                     <a href="#">Perfil</a>
                     <a href="login.html" class="btn-entrar">Entrar</a>
                 </nav>
@@ -211,67 +223,40 @@
                 </div>
 
                 <div class="bloco-explorar">
-                        <p>
-                            Não encontrou o livro que procurava? Explore os  compartilhados pela comunidade.
-                        </p>
-                        <a href="explorarlivros.html" class="btn-explorar">+ Cadastrar livro</a>
-                    </div>
+                    <p>
+                        Não encontrou o livro que procurava? Explore os
+                        compartilhados pela comunidade.
+                    </p>
+                    <a href="explorarlivros.html" class="btn-explorar"
+                        >+ Cadastrar livro</a
+                    >
+                </div>
             </section>
         </main>
 
         <footer class="footer">
-            <div class="container-footer">
-                <div class="footer-content">
-                    <p>
-                        &copy; 2024 Minha Estante. Todos os direitos reservados.
-                    </p>
-                    <nav class="footer-nav" aria-label="Links do rodapé">
-                        <div class="footer-links">
-                            <h4>Plataforma</h4>
-                            <ul>
-                                <li>
-                                    <a href="explorarlivros.html">Explorar Livros</a>
-                                </li>
-                                <li>
-                                    <a href="minhaEstante.html"
-                                        >Minha Estante</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="cadastrar.html">Cadastrar Livro</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-links">
-                            <h4>Comunidade</h4>
-                            <ul>
-                                <li><a href="login.html">Entrar</a></li>
-                                <li><a href="cadastroConta.html">Criar Conta</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-links">
-                            <h4>Legal</h4>
-                            <ul>
-                                <li><a href="#">Termos de Uso</a></li>
-                                <li><a href="#">Política de Privacidade</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="footer-bottom">
-                        <p>
-                            &copy; 2024 Entrelinhas. Todos os direitos
-                            reservados.
-                        </p>
-                        <p class="footer-credits">
-                            Desenvolvido para o curso Transforme-se | PROA —
-                            Desenvolvimento Front-End Online
-                        </p>
-                    </div>
-                </div>
-                <!-- footer-content -->
+        <div class="footer-container">
+            <div>
+                <img src="../img/logo/icone.png" alt="Mascote" class="footer-logo">
+                <span>&copy; Entrelinhas 2026</span>
             </div>
-            <!-- container -->
-        </footer>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="explorarlivros.html">Explorar livros</a></li>
+                    <li><a href="minhaEstante.html">Minha estante</a></li>
+                    <li><a href="cadastrarLivro.html">Cadastro de Livros</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bx bxl-tiktok"></i></a>
+                        <span>@entrelinhas</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
         <!-- Estrutura do Pop-up (Modal)-->
         <div id="bookModal" class="modal-overlay" aria-hidden="true">

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Entrelinhas - Início de cada História</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/styleGeral.css" />
+    <link rel="stylesheet" href="css/styleIndex.css">
+</head>
+<body>
+
+    <header class="topo">
+            <div class="container flex-topo">
+                <a href="index.html" class="logo">
+                    <img
+                        src="img/logo/logo.svg"
+                        alt="Entrelinhas"
+                        class="logo-img"
+                    />
+                </a>
+
+                <nav class="menu">
+                    <a href="index.html" class="ativo">Início</a>
+                    <a href="pages/explorarlivros.html">Explorar Livros</a>
+                    <a href="pages/minhaEstante.html">Minha Estante</a>
+                    <a href="pages/cadastrarLivro.html">Cadastrar Livro</a>
+                    <a href="#">Perfil</a>
+                    <a href="pages/login.html" class="btn-entrar">Entrar</a>
+                </nav>
+            </div>
+        </header>
+
+    <main class="container main-home">
+        
+        <!-- SEÇÃO 1: HERO BANNER -->
+        <section class="hero-section">
+            <div class="hero-texto">
+                <h1>Encontre livros que combinam com você.</h1>
+                <p>Explore histórias, descubra autores e compartilhe leituras com pessoas que gostam do mesmo que você.</p>
+                <a href="explorar.html" class="btn-hero">Explorar livros &rarr;</a>
+            </div>
+
+            <div class="hero-destaque">
+                <div class="destaque-capa-maior">
+                    <img
+                                src="img/livros/peso-do-passaro-morto.jpg"
+                                alt="O Peso do Pássaro Morto"
+                            />
+                </div>
+                <div class="destaque-info-lateral">
+                    <span class="destaque-tag">Destaque da Semana</span>
+                    <h3>O Peso do Pássaro Morto</h3>
+                    <p>Uma história sensível sobre memória, perdas e recomeços ao longo das décadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-recomendacoes">
+            
+            <div class="coluna-cards">
+                <span class="label-secao">PARA SUA PRÓXIMA LEITURA</span>
+                
+                <div class="grade-home-cards">
+                    <!-- Card 1 -->
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DRAMA</span>
+                            <img src="img/livros/a-biblioteca-da-meia-noite.jpg" alt="A biblioteca da meia-noite">
+                            <div class="gancho-hover">
+                                <p>"Entre a vida e a morte existe uma biblioteca."</p>
+                                <span>Ver detalhes</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>A biblioteca da meia-noite</h3>
+                            <p class="autor">Matt Haig</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="nota">4.8</span>
+                            </div>
+                            <button class="btn-adicionar">+ Adicionar à Estante</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">FICÇÃO</span>
+                            <img src="img/livros/torto-arado.jpg" alt="Torto Arado">
+                            <div class="gancho-hover">
+                                <p>"Uma narrativa visceral sobre terra, irmandade e resistência."</p>
+                                <span>Ver detalhes</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>Torto Arado</h3>
+                            <p class="autor">Itamar Vieira Junior</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="nota">4.9</span>
+                            </div>
+                            <button class="btn-adicionar">+ Adicionar à Estante</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card-livro">
+                        <div class="capa-wrapper">
+                            <span class="tag-categoria">DISTOPIA</span>
+                            <img src="img/livros/o-conto-da-aia.jpg" alt="O conto da aia">
+                            <div class="gancho-hover">
+                                <p>"Um clássico distópico sobre liberdade e sobrevivência."</p>
+                                <span>Ver detalhes</span>
+                            </div>
+                        </div>
+                        <div class="info-livro">
+                            <h3>O conto da aia</h3>
+                            <p class="autor">Margaret Atwood</p>
+                            <div class="avaliacao">
+                                <span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                <span class="nota">4.6</span>
+                            </div>
+                            <button class="btn-adicionar">+ Adicionar à Estante</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Lado Direito: Texto Institucional -->
+            <div class="coluna-texto-lateral">
+                <span class="eyebrow-vinho">HISTÓRIAS INCRÍVEIS</span>
+                <h2>Recomendações feitas para inspirar sua próxima leitura.</h2>
+                <p>Salve favoritos, acompanhe sua estante e troque indicações.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé Padrão -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <img src="img/logo/icone.png" alt="Mascote" class="footer-logo">
+                <span>&copy; Entrelinhas 2026</span>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pages/explorarlivros.html">Explorar livros</a></li>
+                    <li><a href="pages/minhaEstante.html">Minha estante</a></li>
+                    <li><a href="pages/cadastrarLivro.html">Cadastro de Livros</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bx bxl-tiktok"></i></a>
+                        <span>@entrelinhas</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
